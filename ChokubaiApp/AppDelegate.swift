@@ -9,12 +9,6 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var terms: [String] = [
-        "にんじんスペシャル",
-        "ピーマン",
-        "10円ブドウ",
-    
-    ]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

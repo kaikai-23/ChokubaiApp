@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		1126C975291A2BE200CD2ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C974291A2BE200CD2ED6 /* AppDelegate.swift */; };
 		1126C977291A2BE200CD2ED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C976291A2BE200CD2ED6 /* SceneDelegate.swift */; };
-		1126C979291A2BE200CD2ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C978291A2BE200CD2ED6 /* ViewController.swift */; };
 		1126C97C291A2BE200CD2ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1126C97A291A2BE200CD2ED6 /* Main.storyboard */; };
 		1126C97E291A2BE500CD2ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1126C97D291A2BE500CD2ED6 /* Assets.xcassets */; };
 		1126C981291A2BE500CD2ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1126C97F291A2BE500CD2ED6 /* LaunchScreen.storyboard */; };
 		1126C98D291E270200CD2ED6 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C98C291E270200CD2ED6 /* ShopViewController.swift */; };
 		1126C98F291F2BCE00CD2ED6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C98E291F2BCE00CD2ED6 /* SearchViewController.swift */; };
+		1126C991291F6D4200CD2ED6 /* FilteredSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */; };
+		1126C99A291F857500CD2ED6 /* PopularCropCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */; };
+		1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1126C971291A2BE200CD2ED6 /* ChokubaiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChokubaiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1126C974291A2BE200CD2ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1126C976291A2BE200CD2ED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1126C978291A2BE200CD2ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1126C97B291A2BE200CD2ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1126C97D291A2BE500CD2ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1126C980291A2BE500CD2ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1126C982291A2BE500CD2ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1126C98C291E270200CD2ED6 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1126C98E291F2BCE00CD2ED6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredSearchViewController.swift; sourceTree = "<group>"; };
+		1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCropCollectionViewCell.swift; sourceTree = "<group>"; };
+		1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,9 @@
 		1126C968291A2BE200CD2ED6 = {
 			isa = PBXGroup;
 			children = (
+				1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */,
+				1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */,
+				1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */,
 				1126C973291A2BE200CD2ED6 /* ChokubaiApp */,
 				1126C972291A2BE200CD2ED6 /* Products */,
 			);
@@ -62,15 +69,22 @@
 			children = (
 				1126C974291A2BE200CD2ED6 /* AppDelegate.swift */,
 				1126C976291A2BE200CD2ED6 /* SceneDelegate.swift */,
-				1126C978291A2BE200CD2ED6 /* ViewController.swift */,
 				1126C97A291A2BE200CD2ED6 /* Main.storyboard */,
-				1126C98E291F2BCE00CD2ED6 /* SearchViewController.swift */,
-				1126C98C291E270200CD2ED6 /* ShopViewController.swift */,
+				1126C998291F833F00CD2ED6 /* VCs */,
 				1126C97D291A2BE500CD2ED6 /* Assets.xcassets */,
 				1126C97F291A2BE500CD2ED6 /* LaunchScreen.storyboard */,
 				1126C982291A2BE500CD2ED6 /* Info.plist */,
 			);
 			path = ChokubaiApp;
+			sourceTree = "<group>";
+		};
+		1126C998291F833F00CD2ED6 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				1126C98C291E270200CD2ED6 /* ShopViewController.swift */,
+				1126C98E291F2BCE00CD2ED6 /* SearchViewController.swift */,
+			);
+			path = VCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1126C99A291F857500CD2ED6 /* PopularCropCollectionViewCell.swift in Sources */,
+				1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */,
 				1126C98F291F2BCE00CD2ED6 /* SearchViewController.swift in Sources */,
 				1126C98D291E270200CD2ED6 /* ShopViewController.swift in Sources */,
-				1126C979291A2BE200CD2ED6 /* ViewController.swift in Sources */,
 				1126C975291A2BE200CD2ED6 /* AppDelegate.swift in Sources */,
 				1126C977291A2BE200CD2ED6 /* SceneDelegate.swift in Sources */,
+				1126C991291F6D4200CD2ED6 /* FilteredSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

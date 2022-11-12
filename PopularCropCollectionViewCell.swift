@@ -9,4 +9,6 @@ import UIKit
 
 class PopularCropCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var itemLabel: UILabel!
+    
 }

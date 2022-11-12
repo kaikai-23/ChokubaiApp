@@ -13,16 +13,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var popularCropCollectionView: UICollectionView!
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
-    }
+    let items = ["野菜１","野菜2","野菜3","野菜4","野菜5","野菜6"]
     
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCropCell", for: indexPath) as! PopularCropCollectionViewCell
-        
-        return cell
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -55,7 +47,25 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-
+//MARK: UICollectionViewDelegate
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1 
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCropCell", for: indexPath) as! PopularCropCollectionViewCell
+        
+        cell.itemLabel.text = items[indexPath.row]
+        
+        return cell
+    }
 
 
 
