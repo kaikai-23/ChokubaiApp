@@ -69,6 +69,9 @@ class SignUpViewController: UIViewController{
                 //Userモデルのやつ
                 let user = User.init(dic: data)
                 print("ユーザー情報の取得ができました\(user.email)")
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let welcomeViewController = storyBoard.instantiateViewController(identifier:"WelcomeVC") as! WelcomeViewController
+                self.present(welcomeViewController, animated: true, completion: nil)
             }
         
         }

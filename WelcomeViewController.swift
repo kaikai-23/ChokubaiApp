@@ -9,9 +9,16 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var logoutBtn: UIButton!
+    
+    @IBOutlet weak var createBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        logoutBtn.layer.cornerRadius = 10
+        createBtn.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
