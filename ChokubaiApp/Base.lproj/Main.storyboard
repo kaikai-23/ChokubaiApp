@@ -341,7 +341,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEX-Bh-Z2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="1272"/>
+            <point key="canvasLocation" x="1171" y="1272"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="bzX-ct-aLA">
+            <objects>
+                <viewController id="GOH-6M-Kab" customClass="WelcomeViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ejM-9w-IEc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyL-NG-zsG">
+                                <rect key="frame" x="76" y="187" width="238" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="花子さんようこそ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuu-jy-sZy">
+                                <rect key="frame" x="113.33333333333333" y="358.66666666666669" width="163.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaa@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZL-j4-wqW">
+                                <rect key="frame" x="135" y="402.66666666666669" width="120.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作成日:2022年11月11日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-se-kdi">
+                                <rect key="frame" x="106.00000000000001" y="443.66666666666669" width="178.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlb-ya-co4">
+                                <rect key="frame" x="95" y="534.66666666666663" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="96r-kX-3rP"/>
+                                    <constraint firstAttribute="height" constant="50" id="bD6-Z6-y14"/>
+                                </constraints>
+                                <color key="tintColor" red="0.91833919289999999" green="0.9450204968" blue="0.99404519800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cxt-lh-ZMJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rlb-ya-co4" firstAttribute="centerX" secondItem="ejM-9w-IEc" secondAttribute="centerX" id="4lR-kU-Iyd"/>
+                            <constraint firstItem="iuu-jy-sZy" firstAttribute="centerX" secondItem="ejM-9w-IEc" secondAttribute="centerX" id="5PZ-L7-7AA"/>
+                            <constraint firstItem="zrp-se-kdi" firstAttribute="centerX" secondItem="ejM-9w-IEc" secondAttribute="centerX" id="86s-vg-hKb"/>
+                            <constraint firstItem="jZL-j4-wqW" firstAttribute="centerX" secondItem="ejM-9w-IEc" secondAttribute="centerX" id="BPz-jR-fIz"/>
+                            <constraint firstItem="iuu-jy-sZy" firstAttribute="top" secondItem="fyL-NG-zsG" secondAttribute="bottom" constant="100" id="R9C-uk-j0Z"/>
+                            <constraint firstItem="fyL-NG-zsG" firstAttribute="centerX" secondItem="ejM-9w-IEc" secondAttribute="centerX" id="crL-jO-0cK"/>
+                            <constraint firstItem="fyL-NG-zsG" firstAttribute="top" secondItem="Cxt-lh-ZMJ" secondAttribute="top" constant="140" id="evO-HR-Opy"/>
+                            <constraint firstItem="Rlb-ya-co4" firstAttribute="top" secondItem="zrp-se-kdi" secondAttribute="bottom" constant="70" id="rtP-Ex-tYm"/>
+                            <constraint firstItem="jZL-j4-wqW" firstAttribute="top" secondItem="iuu-jy-sZy" secondAttribute="bottom" constant="20" id="tsF-bc-eRa"/>
+                            <constraint firstItem="zrp-se-kdi" firstAttribute="top" secondItem="jZL-j4-wqW" secondAttribute="bottom" constant="20" id="tyd-tW-BCE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lL3-Tw-g2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050" y="1266"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="dYr-aq-ess">

@@ -10,6 +10,17 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
+//Userモデルの作成(保存するときの値と一致させる必要がある)
+struct User{
+    let email: String
+    let createdAt: Timestamp
+    
+    init(dic:[String:Any]){
+        self.email = dic["email"] as! String
+        self.createdAt = dic["createdAt"] as! Timestamp
+    }
+}
+
 class SignUpViewController: UIViewController{
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -24,24 +35,14 @@ class SignUpViewController: UIViewController{
         guard let email = emailTextField.text else {return}
         guard let password = passwordTextField.text else {return}
         
-        //Authが緑にならない問題、認証情報の保存に失敗しましたと表示される問題
+
         Auth.auth().createUser(withEmail: email, password: password){(res, err) in
             if let err = err {
                 print("認証情報の保存に失敗しました\(err)")
+                return
             }
-            print("認証情報の保存に成功しました")
-            
-            //ユーザーのidを取得
-            guard let uid = Auth.auth().currentUser?.uid else {return}
-            
-            let docData = ["email":email,"createdAt": Timestamp()] as [String:Any]
-            Firestore.firestore().collection("users").document(uid).setData(docData){(err)in
-                if let err = err{
-                    print("Firestoreへの保存に失敗しました\(err)")
-                    return
-                }
-                print("Firestoreへの保存に成功しました")
-            }
+
+            self.addUserInfoToFirestore(email: email)
         }
     
     }
@@ -50,12 +51,26 @@ class SignUpViewController: UIViewController{
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         let docData = ["email":email,"createdAt": Timestamp()] as [String:Any]
-        Firestore.firestore().collection("users").document(uid).setData(docData){(err)in
+        let userRef = Firestore.firestore().collection("users").document(uid)
+        
+        userRef.setData(docData){(err) in
             if let err = err{
                 print("Firestoreへの保存に失敗しました\(err)")
                 return
             }
             print("Firestoreへの保存に成功しました")
+            
+            userRef.getDocument{(snapshot, err)in
+                if let err = err{
+                    print("ユーザー情報の取得に失敗しました\(err)")
+                    return
+                }
+                guard let data = snapshot?.data() else {return}
+                //Userモデルのやつ
+                let user = User.init(dic: data)
+                print("ユーザー情報の取得ができました\(user.email)")
+            }
+        
         }
     }
     
