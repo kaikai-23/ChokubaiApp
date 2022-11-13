@@ -6,6 +6,7 @@ target 'ChokubaiApp' do
   use_frameworks!
 
   # Pods for ChokubaiApp
+	pod 'Firebase/Analytics'
 	pod 'Alamofire'
 	pod 'KeychainAccess'
 	pod 'Kingfisher'
