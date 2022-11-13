@@ -18,6 +18,7 @@
 		1126C99A291F857500CD2ED6 /* PopularCropCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */; };
 		1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */; };
 		1126C99E29206E9700CD2ED6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */; };
+		1126C9A2292088D500CD2ED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */; };
 		895F478B599954E603F49FD5 /* Pods_ChokubaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCropCollectionViewCell.swift; sourceTree = "<group>"; };
 		1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31C09D511D01E7F7A3CA62CE /* Pods-ChokubaiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.debug.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4672B5853CEA66D151B6E4E7 /* Pods-ChokubaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.release.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.release.xcconfig"; sourceTree = "<group>"; };
 		B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChokubaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				1126C998291F833F00CD2ED6 /* VCs */,
 				1126C97D291A2BE500CD2ED6 /* Assets.xcassets */,
 				1126C97F291A2BE500CD2ED6 /* LaunchScreen.storyboard */,
+				1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */,
 				1126C982291A2BE500CD2ED6 /* Info.plist */,
 			);
 			path = ChokubaiApp;
@@ -103,7 +106,6 @@
 				31C09D511D01E7F7A3CA62CE /* Pods-ChokubaiApp.debug.xcconfig */,
 				4672B5853CEA66D151B6E4E7 /* Pods-ChokubaiApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1126C981291A2BE500CD2ED6 /* LaunchScreen.storyboard in Resources */,
+				1126C9A2292088D500CD2ED6 /* GoogleService-Info.plist in Resources */,
 				1126C97E291A2BE500CD2ED6 /* Assets.xcassets in Resources */,
 				1126C97C291A2BE200CD2ED6 /* Main.storyboard in Resources */,
 			);

@@ -6,12 +6,59 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController{
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerBtn: UIButton!
+    
+    @IBAction func tappedRegisterButton(_ sender: Any) {
+        handleAuthToFirebase()
+        print("押されたよ")
+    }
+    private func handleAuthToFirebase(){
+        guard let email = emailTextField.text else {return}
+        guard let password = passwordTextField.text else {return}
+        
+        //Authが緑にならない問題、認証情報の保存に失敗しましたと表示される問題
+        Auth.auth().createUser(withEmail: email, password: password){(res, err) in
+            if let err = err {
+                print("認証情報の保存に失敗しました\(err)")
+            }
+            print("認証情報の保存に成功しました")
+            
+            //ユーザーのidを取得
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+            
+            let docData = ["email":email,"createdAt": Timestamp()] as [String:Any]
+            Firestore.firestore().collection("users").document(uid).setData(docData){(err)in
+                if let err = err{
+                    print("Firestoreへの保存に失敗しました\(err)")
+                    return
+                }
+                print("Firestoreへの保存に成功しました")
+            }
+        }
+    
+    }
+    private func addUserInfoToFirestore(email:String){
+        //ユーザーのidを取得
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        let docData = ["email":email,"createdAt": Timestamp()] as [String:Any]
+        Firestore.firestore().collection("users").document(uid).setData(docData){(err)in
+            if let err = err{
+                print("Firestoreへの保存に失敗しました\(err)")
+                return
+            }
+            print("Firestoreへの保存に成功しました")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerBtn.isEnabled = false
