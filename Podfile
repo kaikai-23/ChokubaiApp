@@ -12,4 +12,6 @@ target 'ChokubaiApp' do
 	pod 'Alamofire'
 	pod 'KeychainAccess'
 	pod 'Kingfisher'
+  pod 'PKHUD', '~> 5.0'
+  
 end

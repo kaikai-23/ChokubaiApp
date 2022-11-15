@@ -1,24 +1,17 @@
 //
-//  WelcomeViewController.swift
-//  ChokubaiApp
+//  ShopIndexViewController.swift
+//  Pods
 //
-//  Created by 寳門海 on 2022/11/13.
+//  Created by 寳門海 on 2022/11/15.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class ShopIndexViewController: UIViewController {
 
-    @IBOutlet weak var dataLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    
-    @IBOutlet weak var logoutBtn: UIButton!
-    
-    @IBOutlet weak var createBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoutBtn.layer.cornerRadius = 10
-        createBtn.layer.cornerRadius = 10
+
         // Do any additional setup after loading the view.
     }
     

@@ -20,6 +20,8 @@
 		1126C99E29206E9700CD2ED6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */; };
 		1126C9A2292088D500CD2ED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */; };
 		11724E232920DAC2000A80B8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11724E222920DAC2000A80B8 /* WelcomeViewController.swift */; };
+		11724E252921DBF4000A80B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11724E242921DBF4000A80B8 /* LoginViewController.swift */; };
+		11724E282923A5A9000A80B8 /* ShopIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11724E272923A5A8000A80B8 /* ShopIndexViewController.swift */; };
 		895F478B599954E603F49FD5 /* Pods_ChokubaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11724E222920DAC2000A80B8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		11724E242921DBF4000A80B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		11724E272923A5A8000A80B8 /* ShopIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopIndexViewController.swift; sourceTree = "<group>"; };
 		31C09D511D01E7F7A3CA62CE /* Pods-ChokubaiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.debug.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4672B5853CEA66D151B6E4E7 /* Pods-ChokubaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.release.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.release.xcconfig"; sourceTree = "<group>"; };
 		B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChokubaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +63,6 @@
 		1126C968291A2BE200CD2ED6 = {
 			isa = PBXGroup;
 			children = (
-				11724E222920DAC2000A80B8 /* WelcomeViewController.swift */,
 				1126C973291A2BE200CD2ED6 /* ChokubaiApp */,
 				1126C972291A2BE200CD2ED6 /* Products */,
 				451CC167DA633818914DCE48 /* Pods */,
@@ -80,11 +83,14 @@
 			children = (
 				1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */,
 				1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */,
+				11724E222920DAC2000A80B8 /* WelcomeViewController.swift */,
 				1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */,
 				1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */,
 				1126C974291A2BE200CD2ED6 /* AppDelegate.swift */,
 				1126C976291A2BE200CD2ED6 /* SceneDelegate.swift */,
 				1126C97A291A2BE200CD2ED6 /* Main.storyboard */,
+				11724E242921DBF4000A80B8 /* LoginViewController.swift */,
+				11724E272923A5A8000A80B8 /* ShopIndexViewController.swift */,
 				1126C998291F833F00CD2ED6 /* VCs */,
 				1126C97D291A2BE500CD2ED6 /* Assets.xcassets */,
 				1126C97F291A2BE500CD2ED6 /* LaunchScreen.storyboard */,
@@ -241,9 +247,11 @@
 				1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */,
 				1126C98F291F2BCE00CD2ED6 /* SearchViewController.swift in Sources */,
 				1126C99E29206E9700CD2ED6 /* UIColorExtension.swift in Sources */,
+				11724E282923A5A9000A80B8 /* ShopIndexViewController.swift in Sources */,
 				1126C98D291E270200CD2ED6 /* ShopViewController.swift in Sources */,
 				1126C975291A2BE200CD2ED6 /* AppDelegate.swift in Sources */,
 				1126C977291A2BE200CD2ED6 /* SceneDelegate.swift in Sources */,
+				11724E252921DBF4000A80B8 /* LoginViewController.swift in Sources */,
 				1126C991291F6D4200CD2ED6 /* FilteredSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
