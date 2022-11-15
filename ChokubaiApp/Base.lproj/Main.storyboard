@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VE9-t8-Cij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GOH-6M-Kab">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -378,7 +378,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="出品する"/>
                                 <connections>
                                     <action selector="tappedToCreateBtn:" destination="GOH-6M-Kab" eventType="touchUpInside" id="bYS-RP-p6Y"/>
-                                    <segue destination="Gir-18-Jow" kind="show" id="75q-uf-Ult"/>
+                                    <segue destination="GwS-le-o1Y" kind="show" id="1DD-Zz-w5z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-XA-nvB">
@@ -427,6 +427,154 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL3-Tw-g2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2028" y="1317"/>
+        </scene>
+        <!--Shop Create View Controller-->
+        <scene sceneID="wn2-BT-rgD">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ifx-8C-fF9" customClass="ShopCreateViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qE6-mH-BSN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUh-GS-jeW">
+                                <rect key="frame" x="100" y="717" width="190" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0lC-fx-Sfq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="次へ"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JCI-F9-bQR">
+                                <rect key="frame" x="16" y="96" width="358" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3tF-PL-1ep">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPu-sI-2Al">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9id-wH-QmZ">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iFg-Mv-iDO">
+                                        <rect key="frame" x="0.0" y="100" width="358" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗管理者氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-NM-cXR">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗管理者氏名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95Y-Rk-AEl">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Xqm-Qo-lcd"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-Od-q66">
+                                <rect key="frame" x="16" y="316" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WgT-kb-Has"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-DC-dPT">
+                                <rect key="frame" x="16" y="366" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C9V-VK-zUn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asu-1R-Zp2">
+                                <rect key="frame" x="16" y="416" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j9O-qZ-5Ae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ege-5p-Lxa">
+                                <rect key="frame" x="16" y="466" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="da2-u3-63c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗紹介文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-H8-rfp">
+                                <rect key="frame" x="16" y="536" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qYD-L1-jph"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cef-m6-syn">
+                                <rect key="frame" x="16" y="586" width="358" height="111"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WWa-cI-jsL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="gfA-H8-rfp" secondAttribute="trailing" constant="16" id="0Sm-Cd-Ljb"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="cef-m6-syn" secondAttribute="trailing" constant="16" id="0Ue-y6-G2F"/>
+                            <constraint firstItem="jUh-GS-jeW" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="100" id="10X-zu-d4z"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="JCI-F9-bQR" secondAttribute="trailing" constant="16" id="5ZL-q9-GaC"/>
+                            <constraint firstItem="gfA-H8-rfp" firstAttribute="top" secondItem="ege-5p-Lxa" secondAttribute="bottom" constant="20" id="5p1-37-dZ4"/>
+                            <constraint firstItem="Ght-Od-q66" firstAttribute="top" secondItem="JCI-F9-bQR" secondAttribute="bottom" constant="20" id="6tc-QA-UZc"/>
+                            <constraint firstItem="aG1-DC-dPT" firstAttribute="top" secondItem="Ght-Od-q66" secondAttribute="bottom" id="96x-oi-Qzj"/>
+                            <constraint firstItem="ege-5p-Lxa" firstAttribute="top" secondItem="asu-1R-Zp2" secondAttribute="bottom" id="9hv-bp-o5S"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="asu-1R-Zp2" secondAttribute="trailing" constant="16" id="Dog-VF-wzC"/>
+                            <constraint firstItem="Ght-Od-q66" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="HcP-2b-Pjf"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="ege-5p-Lxa" secondAttribute="trailing" constant="16" id="MB9-aR-Chp"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="jUh-GS-jeW" secondAttribute="trailing" constant="100" id="PKO-Sl-s0X"/>
+                            <constraint firstItem="JCI-F9-bQR" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="SEJ-yT-WoB"/>
+                            <constraint firstItem="cef-m6-syn" firstAttribute="top" secondItem="gfA-H8-rfp" secondAttribute="bottom" id="Wzl-KO-Ii0"/>
+                            <constraint firstItem="gfA-H8-rfp" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="aSZ-UQ-aEa"/>
+                            <constraint firstItem="asu-1R-Zp2" firstAttribute="top" secondItem="aG1-DC-dPT" secondAttribute="bottom" id="c0u-cC-Gxq"/>
+                            <constraint firstItem="ege-5p-Lxa" firstAttribute="top" secondItem="asu-1R-Zp2" secondAttribute="bottom" id="dQf-e5-Wqr"/>
+                            <constraint firstItem="ege-5p-Lxa" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="hxO-A4-E5c"/>
+                            <constraint firstItem="cef-m6-syn" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="jXN-qS-JoS"/>
+                            <constraint firstItem="aG1-DC-dPT" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="lOi-Lz-0NI"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="bottom" secondItem="jUh-GS-jeW" secondAttribute="bottom" constant="30" id="n6m-dG-OHW"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="aG1-DC-dPT" secondAttribute="trailing" constant="16" id="nA6-ME-can"/>
+                            <constraint firstItem="JCI-F9-bQR" firstAttribute="top" secondItem="WWa-cI-jsL" secondAttribute="top" constant="40" id="nnh-jc-fsv"/>
+                            <constraint firstItem="jUh-GS-jeW" firstAttribute="top" secondItem="cef-m6-syn" secondAttribute="bottom" constant="20" id="tHY-gN-x0Z"/>
+                            <constraint firstItem="asu-1R-Zp2" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="xXH-S9-ccg"/>
+                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="Ght-Od-q66" secondAttribute="trailing" constant="16" id="yPk-bb-qdZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RHI-09-AGD"/>
+                    <connections>
+                        <outlet property="tappedToCreateBtn" destination="jUh-GS-jeW" id="bbI-2n-NTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5m-hr-i3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852.3076923076924" y="1316.5876777251185"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="dYr-aq-ess">
@@ -574,35 +722,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzs-wi-JCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2662" y="832"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ZFX-q3-qCI">
-            <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="OZx-yz-JEN" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NR2-1J-293">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y2r-Hx-fGc">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y2r-Hx-fGc" id="2pn-FF-56p">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="OZx-yz-JEN" id="3qR-kE-IMU"/>
-                            <outlet property="delegate" destination="OZx-yz-JEN" id="MgF-A6-eK3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="boG-mo-tj9"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhH-2r-LVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4332.3076923076924" y="1324.4075829383885"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wR2-WQ-Y82">
@@ -943,24 +1062,24 @@
             </objects>
             <point key="canvasLocation" x="262" y="1318"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OZd-q5-o2Q">
+        <!--店舗情報登録-->
+        <scene sceneID="uwk-Jn-OJl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gir-18-Jow" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GwS-le-o1Y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="k7J-RA-HiM"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Gt-G2-9Fd">
+                    <navigationItem key="navigationItem" title="店舗情報登録" id="Egg-nH-tl2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQ6-2w-xoh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OZx-yz-JEN" kind="relationship" relationship="rootViewController" id="X6J-Ol-hKE"/>
+                        <segue destination="Ifx-8C-fF9" kind="relationship" relationship="rootViewController" id="k7v-y7-ij8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jC0-vz-srG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDk-bK-cRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3403.0769230769229" y="1324.4075829383885"/>
+            <point key="canvasLocation" x="2923.0769230769229" y="1316.5876777251185"/>
         </scene>
     </scenes>
     <resources>

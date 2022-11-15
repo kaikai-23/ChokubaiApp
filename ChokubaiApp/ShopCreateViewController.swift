@@ -1,16 +1,19 @@
 //
-//  ShopIndexViewController.swift
-//  Pods
+//  ShopCreateViewController.swift
+//  ChokubaiApp
 //
-//  Created by 寳門海 on 2022/11/15.
+//  Created by 寳門海 on 2022/11/16.
 //
 
 import UIKit
 
-class ShopIndexViewController: UIViewController {
+class ShopCreateViewController: UIViewController {
 
+    @IBOutlet weak var tappedToCreateBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tappedToCreateBtn.layer.cornerRadius = 18
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +28,5 @@ class ShopIndexViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    //アイウエオ
 
 }

@@ -12962,7 +12962,6 @@
 		1126AACBC950BE65D67EF475740572E2 /* filesystem_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = filesystem_posix.cc; path = Firestore/core/src/util/filesystem_posix.cc; sourceTree = "<group>"; };
 		1156B3ADC35B1E0FFB909CEFC0760730 /* v3_cpols.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = v3_cpols.c; path = src/crypto/x509v3/v3_cpols.c; sourceTree = "<group>"; };
 		115D9B3C4950E290DC35FADEB2AE14D6 /* FBLPromise+Async.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Async.m"; path = "Sources/FBLPromises/FBLPromise+Async.m"; sourceTree = "<group>"; };
-		11724E262923A418000A80B8 /* ShopIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShopIndexViewController.swift; path = ../ChokubaiApp/ShopIndexViewController.swift; sourceTree = "<group>"; };
 		118FADD980ED928902B1F65F9EFA5303 /* FIRVerifyAssertionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyAssertionRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyAssertionRequest.m; sourceTree = "<group>"; };
 		11AD5CE463EB7E52DF45AB356B4B3C9C /* alts_record_protocol_crypter_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alts_record_protocol_crypter_common.h; path = src/core/tsi/alts/frame_protector/alts_record_protocol_crypter_common.h; sourceTree = "<group>"; };
 		11B2D7D12B77D8E8CA1F3481C819F6D9 /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = include/grpcpp/impl/codegen/config.h; sourceTree = "<group>"; };
@@ -21520,7 +21519,6 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				11724E262923A418000A80B8 /* ShopIndexViewController.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				8275CCB4E8732497B1021FCBC240F3C2 /* Frameworks */,
 				CCF4F7466615812B71674B7368F1144D /* Pods */,
