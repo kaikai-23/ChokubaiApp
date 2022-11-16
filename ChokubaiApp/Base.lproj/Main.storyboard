@@ -378,7 +378,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="出品する"/>
                                 <connections>
                                     <action selector="tappedToCreateBtn:" destination="GOH-6M-Kab" eventType="touchUpInside" id="bYS-RP-p6Y"/>
-                                    <segue destination="GwS-le-o1Y" kind="show" id="1DD-Zz-w5z"/>
+                                    <segue destination="mX9-MK-uI7" kind="show" id="r4s-xS-j5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-XA-nvB">
@@ -428,153 +428,221 @@
             </objects>
             <point key="canvasLocation" x="2028" y="1317"/>
         </scene>
-        <!--店舗情報登録-->
-        <scene sceneID="wn2-BT-rgD">
+        <!--Shop Create View Controller-->
+        <scene sceneID="VEL-gc-uWB">
             <objects>
-                <viewController title="店舗情報登録" modalPresentationStyle="fullScreen" id="Ifx-8C-fF9" customClass="ShopCreateViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qE6-mH-BSN">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                <viewController modalPresentationStyle="fullScreen" id="WRu-k3-AIh" customClass="ShopCreateViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3L-jh-k06">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="1143"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUh-GS-jeW">
-                                <rect key="frame" x="100" y="717" width="190" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0lC-fx-Sfq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="次へ"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JCI-F9-bQR">
-                                <rect key="frame" x="16" y="76" width="358" height="200"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhI-5G-ivH">
+                                <rect key="frame" x="0.0" y="56" width="390" height="1087"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3tF-PL-1ep">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-Xm-Ee6" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1200"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPu-sI-2Al">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4v-1S-fOm">
+                                                <rect key="frame" x="100" y="1130" width="190" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="6bU-qa-v6h"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="次へ"/>
+                                                <connections>
+                                                    <action selector="tappedToCreateBtn:" destination="WRu-k3-AIh" eventType="touchUpInside" id="OMt-Fb-3TP"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗外観" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90a-rf-rtV">
+                                                <rect key="frame" x="16" y="460" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zUz-PW-oaO"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9id-wH-QmZ">
-                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iFg-Mv-iDO">
-                                        <rect key="frame" x="0.0" y="100" width="358" height="100"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗管理者氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-NM-cXR">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-2D-Xub">
+                                                <rect key="frame" x="16" y="240" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Coh-hw-SSN"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗管理者氏名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95Y-Rk-AEl">
-                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4xn-Uc-UNi">
+                                                <rect key="frame" x="16" y="290" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HGa-G1-pXp"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-uA-yAH">
+                                                <rect key="frame" x="16" y="340" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="noN-Ye-ULy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXw-al-F1s">
+                                                <rect key="frame" x="16" y="390" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fKt-fh-hDQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MWB-ZF-xM4">
+                                                <rect key="frame" x="16" y="20" width="358" height="200"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VFf-rJ-LZ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="100"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9v-R5-bFW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYj-Q8-FdD">
+                                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dju-FQ-cfR">
+                                                        <rect key="frame" x="0.0" y="100" width="358" height="100"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗管理者氏名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-1n-GTU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗管理者氏名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRb-Yh-dOe">
+                                                                <rect key="frame" x="0.0" y="50" width="358" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="f76-26-Z9u"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗紹介文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1b-iL-XO3">
+                                                <rect key="frame" x="16" y="790" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kc0-65-2AD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-nD-yzw">
+                                                <rect key="frame" x="16" y="850" width="358" height="250"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-T6-GZF">
+                                                <rect key="frame" x="16" y="520" width="358" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="leC-Gt-Z5F"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="画像を選択してください">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="HiraMaruProN-W4"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="shopImageBtn:" destination="WRu-k3-AIh" eventType="touchUpInside" id="Fn9-pJ-JIF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Sd4-T6-GZF" firstAttribute="top" secondItem="90a-rf-rtV" secondAttribute="bottom" constant="10" id="0f3-nj-Faf"/>
+                                            <constraint firstItem="W4v-1S-fOm" firstAttribute="top" secondItem="4Ed-nD-yzw" secondAttribute="bottom" constant="30" id="1Bm-SQ-imC"/>
+                                            <constraint firstAttribute="trailing" secondItem="rPc-2D-Xub" secondAttribute="trailing" constant="16" id="2vv-I6-Dbv"/>
+                                            <constraint firstItem="Sd4-T6-GZF" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="3zn-he-eOd"/>
+                                            <constraint firstItem="90a-rf-rtV" firstAttribute="top" secondItem="fXw-al-F1s" secondAttribute="bottom" constant="20" id="5HW-hQ-bie"/>
+                                            <constraint firstItem="zbT-uA-yAH" firstAttribute="top" secondItem="4xn-Uc-UNi" secondAttribute="bottom" id="5WB-Gr-LYl"/>
+                                            <constraint firstItem="rPc-2D-Xub" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="9D4-qD-4vy"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sd4-T6-GZF" secondAttribute="trailing" constant="16" id="Ajy-QL-JfC"/>
+                                            <constraint firstItem="4xn-Uc-UNi" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="E1g-OW-LjV"/>
+                                            <constraint firstItem="fXw-al-F1s" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="EH8-IP-cAx"/>
+                                            <constraint firstAttribute="trailing" secondItem="4xn-Uc-UNi" secondAttribute="trailing" constant="16" id="Gw6-Sa-aWm"/>
+                                            <constraint firstItem="4Ed-nD-yzw" firstAttribute="top" secondItem="t1b-iL-XO3" secondAttribute="bottom" constant="10" id="JJb-q6-q9A"/>
+                                            <constraint firstItem="4xn-Uc-UNi" firstAttribute="top" secondItem="rPc-2D-Xub" secondAttribute="bottom" id="OPZ-bP-ci3"/>
+                                            <constraint firstItem="fXw-al-F1s" firstAttribute="top" secondItem="zbT-uA-yAH" secondAttribute="bottom" id="OUF-Ce-GbT"/>
+                                            <constraint firstAttribute="bottom" secondItem="W4v-1S-fOm" secondAttribute="bottom" constant="30" id="OZS-sb-Z6h"/>
+                                            <constraint firstItem="W4v-1S-fOm" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="100" id="PET-4e-T4s"/>
+                                            <constraint firstItem="t1b-iL-XO3" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="UC7-bV-91b"/>
+                                            <constraint firstItem="90a-rf-rtV" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="Vgf-oB-pJJ"/>
+                                            <constraint firstItem="t1b-iL-XO3" firstAttribute="top" secondItem="Sd4-T6-GZF" secondAttribute="bottom" constant="20" id="YAv-nS-sOO"/>
+                                            <constraint firstAttribute="trailing" secondItem="t1b-iL-XO3" secondAttribute="trailing" constant="16" id="Ynx-0x-T1e"/>
+                                            <constraint firstAttribute="trailing" secondItem="fXw-al-F1s" secondAttribute="trailing" constant="16" id="efd-eb-0ep"/>
+                                            <constraint firstItem="zbT-uA-yAH" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="fQv-Bc-oGn"/>
+                                            <constraint firstItem="4Ed-nD-yzw" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="gHJ-U6-FTi"/>
+                                            <constraint firstItem="MWB-ZF-xM4" firstAttribute="top" secondItem="jXj-Xm-Ee6" secondAttribute="top" constant="20" id="iLf-Jj-7Kc"/>
+                                            <constraint firstAttribute="trailing" secondItem="zbT-uA-yAH" secondAttribute="trailing" constant="16" id="joG-pl-kT1"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ed-nD-yzw" secondAttribute="trailing" constant="16" id="kvx-F5-fzG"/>
+                                            <constraint firstAttribute="trailing" secondItem="90a-rf-rtV" secondAttribute="trailing" constant="16" id="ntC-SH-PaM"/>
+                                            <constraint firstAttribute="trailing" secondItem="MWB-ZF-xM4" secondAttribute="trailing" constant="16" id="qYp-R0-Gsq"/>
+                                            <constraint firstItem="rPc-2D-Xub" firstAttribute="top" secondItem="MWB-ZF-xM4" secondAttribute="bottom" constant="20" id="uKn-7I-2aN"/>
+                                            <constraint firstAttribute="height" constant="1200" id="udE-C5-ZKo"/>
+                                            <constraint firstAttribute="trailing" secondItem="W4v-1S-fOm" secondAttribute="trailing" constant="100" id="xGi-jF-Hoq"/>
+                                            <constraint firstItem="MWB-ZF-xM4" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="zsL-rq-qcc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Xqm-Qo-lcd"/>
+                                    <constraint firstAttribute="trailing" secondItem="jXj-Xm-Ee6" secondAttribute="trailing" id="J9B-q9-8vT"/>
+                                    <constraint firstItem="jXj-Xm-Ee6" firstAttribute="leading" secondItem="nhI-5G-ivH" secondAttribute="leading" id="NBs-J3-enT"/>
+                                    <constraint firstItem="jXj-Xm-Ee6" firstAttribute="top" secondItem="nhI-5G-ivH" secondAttribute="top" id="Xaa-pg-ncc"/>
+                                    <constraint firstAttribute="bottom" secondItem="jXj-Xm-Ee6" secondAttribute="bottom" id="jyc-mk-6w5"/>
                                 </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-Od-q66">
-                                <rect key="frame" x="16" y="296" width="358" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WgT-kb-Has"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-DC-dPT">
-                                <rect key="frame" x="16" y="346" width="358" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="C9V-VK-zUn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asu-1R-Zp2">
-                                <rect key="frame" x="16" y="396" width="358" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="j9O-qZ-5Ae"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ege-5p-Lxa">
-                                <rect key="frame" x="16" y="446" width="358" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="da2-u3-63c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗紹介文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-H8-rfp">
-                                <rect key="frame" x="16" y="516" width="358" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qYD-L1-jph"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cef-m6-syn">
-                                <rect key="frame" x="16" y="566" width="358" height="131"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="WWa-cI-jsL"/>
+                        <viewLayoutGuide key="safeArea" id="E7r-Tg-hR4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="gfA-H8-rfp" secondAttribute="trailing" constant="16" id="0Sm-Cd-Ljb"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="cef-m6-syn" secondAttribute="trailing" constant="16" id="0Ue-y6-G2F"/>
-                            <constraint firstItem="jUh-GS-jeW" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="100" id="10X-zu-d4z"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="JCI-F9-bQR" secondAttribute="trailing" constant="16" id="5ZL-q9-GaC"/>
-                            <constraint firstItem="gfA-H8-rfp" firstAttribute="top" secondItem="ege-5p-Lxa" secondAttribute="bottom" constant="20" id="5p1-37-dZ4"/>
-                            <constraint firstItem="Ght-Od-q66" firstAttribute="top" secondItem="JCI-F9-bQR" secondAttribute="bottom" constant="20" id="6tc-QA-UZc"/>
-                            <constraint firstItem="aG1-DC-dPT" firstAttribute="top" secondItem="Ght-Od-q66" secondAttribute="bottom" id="96x-oi-Qzj"/>
-                            <constraint firstItem="ege-5p-Lxa" firstAttribute="top" secondItem="asu-1R-Zp2" secondAttribute="bottom" id="9hv-bp-o5S"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="asu-1R-Zp2" secondAttribute="trailing" constant="16" id="Dog-VF-wzC"/>
-                            <constraint firstItem="Ght-Od-q66" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="HcP-2b-Pjf"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="ege-5p-Lxa" secondAttribute="trailing" constant="16" id="MB9-aR-Chp"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="jUh-GS-jeW" secondAttribute="trailing" constant="100" id="PKO-Sl-s0X"/>
-                            <constraint firstItem="JCI-F9-bQR" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="SEJ-yT-WoB"/>
-                            <constraint firstItem="cef-m6-syn" firstAttribute="top" secondItem="gfA-H8-rfp" secondAttribute="bottom" id="Wzl-KO-Ii0"/>
-                            <constraint firstItem="gfA-H8-rfp" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="aSZ-UQ-aEa"/>
-                            <constraint firstItem="asu-1R-Zp2" firstAttribute="top" secondItem="aG1-DC-dPT" secondAttribute="bottom" id="c0u-cC-Gxq"/>
-                            <constraint firstItem="ege-5p-Lxa" firstAttribute="top" secondItem="asu-1R-Zp2" secondAttribute="bottom" id="dQf-e5-Wqr"/>
-                            <constraint firstItem="ege-5p-Lxa" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="hxO-A4-E5c"/>
-                            <constraint firstItem="cef-m6-syn" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="jXN-qS-JoS"/>
-                            <constraint firstItem="aG1-DC-dPT" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="lOi-Lz-0NI"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="bottom" secondItem="jUh-GS-jeW" secondAttribute="bottom" constant="30" id="n6m-dG-OHW"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="aG1-DC-dPT" secondAttribute="trailing" constant="16" id="nA6-ME-can"/>
-                            <constraint firstItem="JCI-F9-bQR" firstAttribute="top" secondItem="WWa-cI-jsL" secondAttribute="top" constant="20" id="nnh-jc-fsv"/>
-                            <constraint firstItem="jUh-GS-jeW" firstAttribute="top" secondItem="cef-m6-syn" secondAttribute="bottom" constant="20" id="tHY-gN-x0Z"/>
-                            <constraint firstItem="asu-1R-Zp2" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="xXH-S9-ccg"/>
-                            <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="Ght-Od-q66" secondAttribute="trailing" constant="16" id="yPk-bb-qdZ"/>
+                            <constraint firstItem="jXj-Xm-Ee6" firstAttribute="width" secondItem="g3L-jh-k06" secondAttribute="width" id="2CQ-35-e0F"/>
+                            <constraint firstItem="nhI-5G-ivH" firstAttribute="trailing" secondItem="E7r-Tg-hR4" secondAttribute="trailing" id="2lw-f9-KEw"/>
+                            <constraint firstItem="nhI-5G-ivH" firstAttribute="leading" secondItem="E7r-Tg-hR4" secondAttribute="leading" id="6Yb-qO-Seq"/>
+                            <constraint firstItem="nhI-5G-ivH" firstAttribute="bottom" secondItem="E7r-Tg-hR4" secondAttribute="bottom" id="7ry-oc-Hun"/>
+                            <constraint firstItem="nhI-5G-ivH" firstAttribute="top" secondItem="E7r-Tg-hR4" secondAttribute="top" id="bhE-k5-K3P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RHI-09-AGD"/>
+                    <navigationItem key="navigationItem" id="0g4-90-YWb"/>
+                    <size key="freeformSize" width="390" height="1200"/>
                     <connections>
-                        <outlet property="tappedToCreateBtn" destination="jUh-GS-jeW" id="bbI-2n-NTP"/>
+                        <outlet property="addressTextField" destination="fXw-al-F1s" id="hmb-u0-299"/>
+                        <outlet property="introductionTextField" destination="4Ed-nD-yzw" id="nb0-yW-MEg"/>
+                        <outlet property="personNameTextField" destination="zRb-Yh-dOe" id="D86-1H-Syq"/>
+                        <outlet property="shopImageBtn" destination="Sd4-T6-GZF" id="AdL-DC-gql"/>
+                        <outlet property="shopNameTextField" destination="dYj-Q8-FdD" id="XYI-p9-dAx"/>
+                        <outlet property="tappedToCreateBtn" destination="W4v-1S-fOm" id="XH2-uW-690"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z5m-hr-i3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lph-lh-71w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3852.3076923076924" y="1316.5876777251185"/>
+            <point key="canvasLocation" x="3909.2307692307691" y="1442.4170616113743"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="dYr-aq-ess">
@@ -1063,23 +1131,23 @@
             <point key="canvasLocation" x="262" y="1318"/>
         </scene>
         <!--店舗情報登録-->
-        <scene sceneID="uwk-Jn-OJl">
+        <scene sceneID="ME3-Ad-4YH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="GwS-le-o1Y" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mX9-MK-uI7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="店舗情報登録" id="Egg-nH-tl2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQ6-2w-xoh">
+                    <navigationItem key="navigationItem" title="店舗情報登録" id="TpI-kz-StC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mLd-h4-pXX">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ifx-8C-fF9" kind="relationship" relationship="rootViewController" id="k7v-y7-ij8"/>
+                        <segue destination="WRu-k3-AIh" kind="relationship" relationship="rootViewController" id="TRh-A1-voi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QDk-bK-cRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtU-eg-4Ke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923.0769230769229" y="1316.5876777251185"/>
+            <point key="canvasLocation" x="2954" y="1317"/>
         </scene>
     </scenes>
     <resources>
