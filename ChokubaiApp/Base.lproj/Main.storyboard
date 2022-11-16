@@ -428,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="2028" y="1317"/>
         </scene>
-        <!--Shop Create View Controller-->
+        <!--店舗情報登録-->
         <scene sceneID="wn2-BT-rgD">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Ifx-8C-fF9" customClass="ShopCreateViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="店舗情報登録" modalPresentationStyle="fullScreen" id="Ifx-8C-fF9" customClass="ShopCreateViewController" customModule="ChokubaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qE6-mH-BSN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,7 +448,7 @@
                                 <state key="normal" title="次へ"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JCI-F9-bQR">
-                                <rect key="frame" x="16" y="96" width="358" height="200"/>
+                                <rect key="frame" x="16" y="76" width="358" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3tF-PL-1ep">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="100"/>
@@ -488,7 +488,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-Od-q66">
-                                <rect key="frame" x="16" y="316" width="358" height="50"/>
+                                <rect key="frame" x="16" y="296" width="358" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WgT-kb-Has"/>
                                 </constraints>
@@ -497,7 +497,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-DC-dPT">
-                                <rect key="frame" x="16" y="366" width="358" height="50"/>
+                                <rect key="frame" x="16" y="346" width="358" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C9V-VK-zUn"/>
                                 </constraints>
@@ -505,7 +505,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asu-1R-Zp2">
-                                <rect key="frame" x="16" y="416" width="358" height="50"/>
+                                <rect key="frame" x="16" y="396" width="358" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="j9O-qZ-5Ae"/>
                                 </constraints>
@@ -514,7 +514,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ege-5p-Lxa">
-                                <rect key="frame" x="16" y="466" width="358" height="50"/>
+                                <rect key="frame" x="16" y="446" width="358" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="da2-u3-63c"/>
                                 </constraints>
@@ -522,7 +522,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗紹介文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-H8-rfp">
-                                <rect key="frame" x="16" y="536" width="358" height="50"/>
+                                <rect key="frame" x="16" y="516" width="358" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qYD-L1-jph"/>
                                 </constraints>
@@ -531,7 +531,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cef-m6-syn">
-                                <rect key="frame" x="16" y="586" width="358" height="111"/>
+                                <rect key="frame" x="16" y="566" width="358" height="131"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -561,7 +561,7 @@
                             <constraint firstItem="aG1-DC-dPT" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="lOi-Lz-0NI"/>
                             <constraint firstItem="WWa-cI-jsL" firstAttribute="bottom" secondItem="jUh-GS-jeW" secondAttribute="bottom" constant="30" id="n6m-dG-OHW"/>
                             <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="aG1-DC-dPT" secondAttribute="trailing" constant="16" id="nA6-ME-can"/>
-                            <constraint firstItem="JCI-F9-bQR" firstAttribute="top" secondItem="WWa-cI-jsL" secondAttribute="top" constant="40" id="nnh-jc-fsv"/>
+                            <constraint firstItem="JCI-F9-bQR" firstAttribute="top" secondItem="WWa-cI-jsL" secondAttribute="top" constant="20" id="nnh-jc-fsv"/>
                             <constraint firstItem="jUh-GS-jeW" firstAttribute="top" secondItem="cef-m6-syn" secondAttribute="bottom" constant="20" id="tHY-gN-x0Z"/>
                             <constraint firstItem="asu-1R-Zp2" firstAttribute="leading" secondItem="WWa-cI-jsL" secondAttribute="leading" constant="16" id="xXH-S9-ccg"/>
                             <constraint firstItem="WWa-cI-jsL" firstAttribute="trailing" secondItem="Ght-Od-q66" secondAttribute="trailing" constant="16" id="yPk-bb-qdZ"/>
@@ -1065,11 +1065,11 @@
         <!--店舗情報登録-->
         <scene sceneID="uwk-Jn-OJl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GwS-le-o1Y" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="GwS-le-o1Y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="店舗情報登録" id="Egg-nH-tl2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QQ6-2w-xoh">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

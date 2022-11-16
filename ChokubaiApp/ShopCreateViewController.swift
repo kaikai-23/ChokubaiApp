@@ -14,6 +14,7 @@ class ShopCreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tappedToCreateBtn.layer.cornerRadius = 18
+        self.title = "店舗情報登録"
 
         // Do any additional setup after loading the view.
     }
