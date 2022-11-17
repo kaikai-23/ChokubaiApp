@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GOH-6M-Kab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VE9-t8-Cij">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -466,22 +466,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗郵便番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-2D-Xub">
-                                                <rect key="frame" x="16" y="240" width="358" height="50"/>
+                                                <rect key="frame" x="16" y="240" width="100" height="50"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="2ph-yn-P8m"/>
                                                     <constraint firstAttribute="height" constant="50" id="Coh-hw-SSN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4xn-Uc-UNi">
-                                                <rect key="frame" x="16" y="290" width="358" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="HGa-G1-pXp"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-uA-yAH">
                                                 <rect key="frame" x="16" y="340" width="358" height="50"/>
                                                 <constraints>
@@ -491,7 +484,7 @@
                                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗郵便番号を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXw-al-F1s">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="店舗住所を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXw-al-F1s">
                                                 <rect key="frame" x="16" y="390" width="358" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fKt-fh-hDQ"/>
@@ -573,22 +566,29 @@
                                                     <action selector="shopImageBtn:" destination="WRu-k3-AIh" eventType="touchUpInside" id="Fn9-pJ-JIF"/>
                                                 </connections>
                                             </button>
+                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="auO-vz-Ih4">
+                                                <rect key="frame" x="16" y="290" width="358" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="luo-Ud-Ow6"/>
+                                                </constraints>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="WRu-k3-AIh" id="cCg-KD-5BG"/>
+                                                </connections>
+                                            </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Sd4-T6-GZF" firstAttribute="top" secondItem="90a-rf-rtV" secondAttribute="bottom" constant="10" id="0f3-nj-Faf"/>
                                             <constraint firstItem="W4v-1S-fOm" firstAttribute="top" secondItem="4Ed-nD-yzw" secondAttribute="bottom" constant="30" id="1Bm-SQ-imC"/>
-                                            <constraint firstAttribute="trailing" secondItem="rPc-2D-Xub" secondAttribute="trailing" constant="16" id="2vv-I6-Dbv"/>
                                             <constraint firstItem="Sd4-T6-GZF" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="3zn-he-eOd"/>
                                             <constraint firstItem="90a-rf-rtV" firstAttribute="top" secondItem="fXw-al-F1s" secondAttribute="bottom" constant="20" id="5HW-hQ-bie"/>
-                                            <constraint firstItem="zbT-uA-yAH" firstAttribute="top" secondItem="4xn-Uc-UNi" secondAttribute="bottom" id="5WB-Gr-LYl"/>
+                                            <constraint firstItem="auO-vz-Ih4" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="9Bl-9W-HO0"/>
                                             <constraint firstItem="rPc-2D-Xub" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="9D4-qD-4vy"/>
                                             <constraint firstAttribute="trailing" secondItem="Sd4-T6-GZF" secondAttribute="trailing" constant="16" id="Ajy-QL-JfC"/>
-                                            <constraint firstItem="4xn-Uc-UNi" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="E1g-OW-LjV"/>
                                             <constraint firstItem="fXw-al-F1s" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="EH8-IP-cAx"/>
-                                            <constraint firstAttribute="trailing" secondItem="4xn-Uc-UNi" secondAttribute="trailing" constant="16" id="Gw6-Sa-aWm"/>
+                                            <constraint firstItem="zbT-uA-yAH" firstAttribute="top" secondItem="auO-vz-Ih4" secondAttribute="bottom" id="EtF-Sn-HZo"/>
                                             <constraint firstItem="4Ed-nD-yzw" firstAttribute="top" secondItem="t1b-iL-XO3" secondAttribute="bottom" constant="10" id="JJb-q6-q9A"/>
-                                            <constraint firstItem="4xn-Uc-UNi" firstAttribute="top" secondItem="rPc-2D-Xub" secondAttribute="bottom" id="OPZ-bP-ci3"/>
                                             <constraint firstItem="fXw-al-F1s" firstAttribute="top" secondItem="zbT-uA-yAH" secondAttribute="bottom" id="OUF-Ce-GbT"/>
                                             <constraint firstAttribute="bottom" secondItem="W4v-1S-fOm" secondAttribute="bottom" constant="30" id="OZS-sb-Z6h"/>
                                             <constraint firstItem="W4v-1S-fOm" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="100" id="PET-4e-T4s"/>
@@ -601,11 +601,13 @@
                                             <constraint firstItem="4Ed-nD-yzw" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="gHJ-U6-FTi"/>
                                             <constraint firstItem="MWB-ZF-xM4" firstAttribute="top" secondItem="jXj-Xm-Ee6" secondAttribute="top" constant="20" id="iLf-Jj-7Kc"/>
                                             <constraint firstAttribute="trailing" secondItem="zbT-uA-yAH" secondAttribute="trailing" constant="16" id="joG-pl-kT1"/>
+                                            <constraint firstAttribute="trailing" secondItem="auO-vz-Ih4" secondAttribute="trailing" constant="16" id="juj-DN-zes"/>
                                             <constraint firstAttribute="trailing" secondItem="4Ed-nD-yzw" secondAttribute="trailing" constant="16" id="kvx-F5-fzG"/>
                                             <constraint firstAttribute="trailing" secondItem="90a-rf-rtV" secondAttribute="trailing" constant="16" id="ntC-SH-PaM"/>
                                             <constraint firstAttribute="trailing" secondItem="MWB-ZF-xM4" secondAttribute="trailing" constant="16" id="qYp-R0-Gsq"/>
                                             <constraint firstItem="rPc-2D-Xub" firstAttribute="top" secondItem="MWB-ZF-xM4" secondAttribute="bottom" constant="20" id="uKn-7I-2aN"/>
                                             <constraint firstAttribute="height" constant="1200" id="udE-C5-ZKo"/>
+                                            <constraint firstItem="auO-vz-Ih4" firstAttribute="top" secondItem="rPc-2D-Xub" secondAttribute="bottom" id="wSA-fj-WxX"/>
                                             <constraint firstAttribute="trailing" secondItem="W4v-1S-fOm" secondAttribute="trailing" constant="100" id="xGi-jF-Hoq"/>
                                             <constraint firstItem="MWB-ZF-xM4" firstAttribute="leading" secondItem="jXj-Xm-Ee6" secondAttribute="leading" constant="16" id="zsL-rq-qcc"/>
                                         </constraints>
@@ -635,14 +637,31 @@
                         <outlet property="addressTextField" destination="fXw-al-F1s" id="hmb-u0-299"/>
                         <outlet property="introductionTextField" destination="4Ed-nD-yzw" id="nb0-yW-MEg"/>
                         <outlet property="personNameTextField" destination="zRb-Yh-dOe" id="D86-1H-Syq"/>
+                        <outlet property="scrollView" destination="nhI-5G-ivH" id="Hja-Ht-MVB"/>
                         <outlet property="shopImageBtn" destination="Sd4-T6-GZF" id="AdL-DC-gql"/>
                         <outlet property="shopNameTextField" destination="dYj-Q8-FdD" id="XYI-p9-dAx"/>
                         <outlet property="tappedToCreateBtn" destination="W4v-1S-fOm" id="XH2-uW-690"/>
+                        <outlet property="zipcodeSearchBar" destination="auO-vz-Ih4" id="l2h-z8-bhr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lph-lh-71w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3909.2307692307691" y="1442.4170616113743"/>
+            <point key="canvasLocation" x="4008" y="1391"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xF8-Om-Hwk">
+            <objects>
+                <viewController id="d65-ha-tzl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBL-2j-DSd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qcA-nL-QKO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbb-MB-r2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5271" y="1288"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="dYr-aq-ess">
