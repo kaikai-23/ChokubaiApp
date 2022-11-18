@@ -31,7 +31,7 @@ struct Address: Codable {
 }
 
 class ShopCreateViewController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tappedToCreateBtn: UIButton!
     
@@ -45,11 +45,11 @@ class ShopCreateViewController: UIViewController {
     
     @IBOutlet weak var introductionTextField: UITextField!
     
-
+    
     
     @IBOutlet weak var zipcodeSearchBar: UISearchBar!
     
-
+    
     
     @IBAction func shopImageBtn(_ sender: Any) {
         print("ボタンが押されました")
@@ -60,11 +60,6 @@ class ShopCreateViewController: UIViewController {
     }
     
     @IBAction func tappedToCreateBtn(_ sender: Any) {
-        guard let shopName = shopNameTextField.text else {return}
-        guard let personName = personNameTextField.text else {return}
-        guard let address = addressTextField.text else {return}
-        guard let introduction = introductionTextField.text else {return}
-        //画像関連
         guard let shopImage = shopImageBtn.imageView?.image else {return}
         guard let uploadShopImage = shopImage.jpegData(compressionQuality: 0.3) else {return}
         let fileName = NSUUID().uuidString
@@ -75,37 +70,113 @@ class ShopCreateViewController: UIViewController {
                 return
             }
             print("FireStorageへの保存に成功しました")
-            
             storageRef.downloadURL{(url, err)in
                 if let err = err{
                     print("FireStorageからの保存に失敗しました\(err)")
                     return
                 }
+                
                 guard let urlString = url?.absoluteString else {return}
                 print("urlString:",urlString)
+                self.createShopToFirestore(shopImageUrl: urlString)
+                //        guard let shopName = shopNameTextField.text else {return}
+                //        guard let personName = personNameTextField.text else {return}
+                //        guard let address = addressTextField.text else {return}
+                //        var shopImageUrl:String = ""
+                //        guard let introduction = introductionTextField.text else {return}
+                //        //画像関連
+                //        guard let shopImage = shopImageBtn.imageView?.image else {return}
+                //        guard let uploadShopImage = shopImage.jpegData(compressionQuality: 0.3) else {return}
+                //        let fileName = NSUUID().uuidString
+                //        let storageRef = Storage.storage().reference().child("shop_image").child(fileName)
+                //        storageRef.putData(uploadShopImage, metadata:nil){(metadata,err)in
+                //            if let err = err{
+                //                print("FireStorageへの保存に失敗しました\(err)")
+                //                return
+                //            }
+                //            print("FireStorageへの保存に成功しました")
+                //
+                //            storageRef.downloadURL{(url, err)in
+                //                if let err = err{
+                //                    print("FireStorageからの保存に失敗しました\(err)")
+                //                    return
+                //                }
+                //                guard let urlString = url?.absoluteString else {return}
+                //                print("urlString:",urlString)
+                //                shopImageUrl = urlString
+                //                print(shopImageUrl)
+                //
+                //            }
+                //
+                //        }
+                //
+                //        guard let uid = Auth.auth().currentUser?.uid else {return}
+                //        let shopData = [
+                //            "shopname":shopName,
+                //            "personname":personName,
+                //            "address":address,
+                //            "shopImageUrl":shopImageUrl,
+                //            "introduction":introduction,
+                //        ] as [String:Any]
+                //
+                //        Firestore.firestore().collection("users").document(uid).collection("shop") .addDocument(data: shopData){
+                //            (err)in
+                //            if let err = err{
+                //               print("Firestoreへの保存に失敗しました\(err)")
+                //                return
+                //            }
+                //            print("Firestoreへの情報の保存が成功しました")
+                //        }
                 
             }
-           
         }
-
+    }
+    //firestoreへのメソッド
+    private func createShopToFirestore(shopImageUrl:String){
+        
+        guard let shopName = shopNameTextField.text else {return}
+        guard let personName = personNameTextField.text else {return}
+        guard let address = addressTextField.text else {return}
+        guard let introduction = introductionTextField.text else {return}
+        //画像関連
+//        guard let shopImage = shopImageBtn.imageView?.image else {return}
+//        guard let uploadShopImage = shopImage.jpegData(compressionQuality: 0.3) else {return}
+//        let fileName = NSUUID().uuidString
+//        let storageRef = Storage.storage().reference().child("shop_image").child(fileName)
+//        storageRef.putData(uploadShopImage, metadata:nil){(metadata,err)in
+//            if let err = err{
+//                print("FireStorageへの保存に失敗しました\(err)")
+//                return
+//            }
+//            print("FireStorageへの保存に成功しました")
+            
+//            storageRef.downloadURL{(url, err)in
+//                if let err = err{
+//                    print("FireStorageからの保存に失敗しました\(err)")
+//                    return
+//                }
+//                guard let urlString = url?.absoluteString else {return}
+//                print("urlString:",urlString)
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let shopData = [
             "shopname":shopName,
             "personname":personName,
             "address":address,
-            "shopImageUrl":urlString,
+            "shopImageUrl":shopImageUrl,
             "introduction":introduction,
         ] as [String:Any]
         
         Firestore.firestore().collection("users").document(uid).collection("shop") .addDocument(data: shopData){
             (err)in
             if let err = err{
-               print("Firestoreへの保存に失敗しました\(err)")
+                print("Firestoreへの保存に失敗しました\(err)")
                 return
             }
             print("Firestoreへの情報の保存が成功しました")
         }
     }
+
+    
     var results: [Address] = []
     let baseUrlStr = "https://zipcloud.ibsnet.co.jp/api/search"
     
