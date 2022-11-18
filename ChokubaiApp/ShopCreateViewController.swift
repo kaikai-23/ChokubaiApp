@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 import Alamofire
+import FirebaseStorage
 
 //MARK: JSONをフラットマップにするためのStruct
 struct ZipCloudResponse: Codable {
@@ -74,6 +75,17 @@ class ShopCreateViewController: UIViewController {
                 return
             }
             print("FireStorageへの保存に成功しました")
+            
+            storageRef.downloadURL{(url, err)in
+                if let err = err{
+                    print("FireStorageからの保存に失敗しました\(err)")
+                    return
+                }
+                guard let urlString = url?.absoluteString else {return}
+                print("urlString:",urlString)
+                
+            }
+           
         }
 
         guard let uid = Auth.auth().currentUser?.uid else {return}
@@ -81,6 +93,7 @@ class ShopCreateViewController: UIViewController {
             "shopname":shopName,
             "personname":personName,
             "address":address,
+            "shopImageUrl":urlString,
             "introduction":introduction,
         ] as [String:Any]
         
