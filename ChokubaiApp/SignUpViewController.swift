@@ -81,9 +81,8 @@ class SignUpViewController: UIViewController{
                 }
                 
                 
-                
-                guard let data = snapshot?.data() else {return}
                 //Userモデルのやつ
+                guard let data = snapshot?.data() else {return}
                 let user = User.init(dic: data)
                 print("ユーザー情報の取得ができました\(user.email)")
                 HUD.hide{(_)in

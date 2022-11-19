@@ -12,6 +12,23 @@ import FirebaseFirestore
 import Alamofire
 import FirebaseStorage
 
+//Shopクラス
+struct Shop{
+    let shopImageUrl:String
+    let address:String
+    let introduction:String
+    let shopname: String
+    let personname: String
+    
+    init(dic:[String:Any]){
+        self.shopImageUrl = dic["shopImageUrl"] as? String ?? ""
+        self.address = dic["address"]as? String ?? ""
+        self.introduction = dic["introduction"]as? String ?? ""
+        self.shopname = dic["shopname"] as? String ?? ""
+        self.personname = dic["personname"]as? String ?? ""
+    }
+}
+
 //MARK: JSONをフラットマップにするためのStruct
 struct ZipCloudResponse: Codable {
     let message: String?
@@ -31,6 +48,7 @@ struct Address: Codable {
 }
 
 class ShopCreateViewController: UIViewController {
+
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tappedToCreateBtn: UIButton!
@@ -48,6 +66,8 @@ class ShopCreateViewController: UIViewController {
     
     
     @IBOutlet weak var zipcodeSearchBar: UISearchBar!
+    
+    var shopData: [String: Any] = [:]
     
     
     
@@ -166,13 +186,42 @@ class ShopCreateViewController: UIViewController {
             "introduction":introduction,
         ] as [String:Any]
         
-        Firestore.firestore().collection("users").document(uid).collection("shop") .addDocument(data: shopData){
+        Firestore.firestore().collection("users").document(uid).collection("shop").document("shopData").setData(shopData) {
             (err)in
             if let err = err{
                 print("Firestoreへの保存に失敗しました\(err)")
                 return
             }
             print("Firestoreへの情報の保存が成功しました")
+            
+        }
+        //データ取得処理
+        Firestore.firestore().collection("users").document(uid).collection("shop").document("shopData").getDocument { (snapshot, error) in
+            
+        //.getDocuments{(snapshot, err)in
+            
+            guard let dataDescription = snapshot?.data() as? [String: Any] else {return}
+            print("DATA:", dataDescription)
+            
+            self.shopData = dataDescription
+//            if let err = err{
+//                print("ユーザー情報の取得に失敗しました\(err)")
+//                return
+//            }
+                        print("ユーザー情報の取得に成功しました\(dataDescription)")
+             print(dataDescription["personname"])
+//            let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+//                    profileVC.personname = dataDescription["personname"] as? String //詳細画面の変数に記事のIDを渡す
+//            self.navigationController?.pushViewController(profileVC, animated: true)
+            
+            self.performSegue(withIdentifier: "toProfile", sender: nil)
+            
+
+
+            
+//            guard let data = snapshot?.data() else {return}
+//            let shop = Shop.init(dic: data)
+
         }
     }
 
@@ -186,6 +235,8 @@ class ShopCreateViewController: UIViewController {
         tappedToCreateBtn.layer.cornerRadius = 18
         self.title = "店舗情報登録"
         shopImageBtn.layer.borderColor = UIColor.systemGray5.cgColor
+        shopImageBtn.setTitle("画像を選択してください", for: .normal)
+        shopImageBtn.titleLabel?.textAlignment = .center
         shopImageBtn.layer.borderWidth = 1.0
         shopImageBtn.layer.cornerRadius = 5
         shopNameTextField.delegate = self
@@ -283,30 +334,43 @@ class ShopCreateViewController: UIViewController {
 //                self.view.transform = .identity
 //    }
 //                           }
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProfile" {
+           let profileVC = segue.destination as! ProfileViewController
+            profileVC.personname = shopData["personname"] as? String
+            profileVC.shopImageUrl = shopData["shopImageUrl"] as? String
+            profileVC.shopname = shopData["shopname"] as? String
+            profileVC.address = shopData["address"] as? String
+            profileVC.introduction = shopData["introduction"] as? String
+            
+
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-                       }
+
+}
 
 extension ShopCreateViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editImage = info[.editedImage]as? UIImage{
+            shopImageBtn.setTitle("", for: .normal)
             shopImageBtn.setImage(editImage.withRenderingMode(.alwaysOriginal), for: .normal)
         }else if let originalImage = info[.originalImage]as? UIImage{
+            shopImageBtn.setTitle("", for: .normal) 
             shopImageBtn.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+            
         }
+        
         shopImageBtn.setTitle("", for: .normal)
         shopImageBtn.imageView?.contentMode = .scaleAspectFill
         shopImageBtn.contentHorizontalAlignment = .fill
         shopImageBtn.contentVerticalAlignment = .fill
         shopImageBtn.clipsToBounds = true
-        
+    
         dismiss(animated: true,completion: nil)
     }
 }
