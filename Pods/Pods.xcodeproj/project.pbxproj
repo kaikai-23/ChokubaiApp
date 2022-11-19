@@ -13102,6 +13102,7 @@
 		1192F1EE95AD9426B6BFF9C67EB7522F /* threadpool.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = threadpool.c; path = src/threadpool.c; sourceTree = "<group>"; };
 		11A6AED89440CB8B9E6BBC2E8B3BA013 /* hide_ptr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hide_ptr.h; path = absl/base/internal/hide_ptr.h; sourceTree = "<group>"; };
 		11A9ECA59F59D1BF01A5A56332E13CE4 /* FIRAuthTokenResult_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthTokenResult_Internal.h; path = FirebaseAuth/Sources/Auth/FIRAuthTokenResult_Internal.h; sourceTree = "<group>"; };
+		11DD616F2928CF3500D6E5BC /* ProduceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProduceCreateViewController.swift; path = ../ChokubaiApp/ProduceCreateViewController.swift; sourceTree = "<group>"; };
 		11FD57B42CE2C5C6FA794A8B28222DDF /* common.upb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = common.upb.c; path = "src/core/ext/upb-generated/envoy/extensions/transport_sockets/tls/v3/common.upb.c"; sourceTree = "<group>"; };
 		120D6B1F805781EE0737F8C08B7035B7 /* refcount_c11.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = refcount_c11.c; path = src/crypto/refcount_c11.c; sourceTree = "<group>"; };
 		120E9F8CF73B8510BDE68A7CEFCAAF27 /* ssl_buffer.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ssl_buffer.cc; path = src/ssl/ssl_buffer.cc; sourceTree = "<group>"; };
@@ -22347,6 +22348,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				11DD616F2928CF3500D6E5BC /* ProduceCreateViewController.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				8275CCB4E8732497B1021FCBC240F3C2 /* Frameworks */,
 				2673E8ED8C34DEED0C62D8577985BDC9 /* Pods */,

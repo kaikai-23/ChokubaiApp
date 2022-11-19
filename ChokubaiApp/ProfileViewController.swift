@@ -25,6 +25,8 @@ import FirebaseStorage
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var shopImageView: UIImageView!
+    
     @IBOutlet weak var shopNameLabel: UILabel!
     
     @IBOutlet weak var personNameLabel: UILabel!
@@ -39,11 +41,25 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        shopNameLabel.text = "店舗名: " + "\(shopname)"
-        addressLabel.text = "住所: " + "\(address)"
-        personNameLabel.text = "店舗管理者" + "\(personname)"
-        introductionLabel.text = introduction
-//        print("profileVC:",shopImageUrl)
+        guard let shopNM =
+        shopname else {return}
+        print("NM:",shopNM)
+        guard let personNM = personname else{return}
+        guard let addressNM = address else{return}
+        guard let introDuction = introduction else{return}
+        guard let shopImage = shopImageUrl else {return}
+        shopImageView.image = UIImage(url: shopImage)
+
+//       let image:UIImage = UIImage(url: "\(shopImage)")
+//        let _:UIImage = UIImage(url: "\(shopImage)")
+//
+//        }
+        
+        shopNameLabel.text = "店舗名: " + "\(shopNM)"
+        addressLabel.text = "住所: " + "\(addressNM)"
+        personNameLabel.text = "店舗管理者" + "\(personNM)"
+        introductionLabel.text = introDuction
+        //        print("profileVC:",shopImageUrl)
 //        print("profileVC:",address)
 //        print("profileVC:",introduction)
 //        print("profileVC:",shopname)
@@ -88,4 +104,17 @@ class ProfileViewController: UIViewController {
     }
     */
 
+}
+extension UIImage {
+    public convenience init(url: String) {
+        let url = URL(string: url)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.init(data: data)!
+            return
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        self.init()
+    }
 }

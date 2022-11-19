@@ -24,6 +24,7 @@
 		11724E2E2923F149000A80B8 /* ShopCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11724E2D2923F149000A80B8 /* ShopCreateViewController.swift */; };
 		11DD616B29274F6100D6E5BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD616A29274F6100D6E5BC /* ProfileViewController.swift */; };
 		11DD616E2927819600D6E5BC /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD616D2927819600D6E5BC /* Shop.swift */; };
+		11DD61712928D06F00D6E5BC /* ProduceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */; };
 		895F478B599954E603F49FD5 /* Pods_ChokubaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		11724E2D2923F149000A80B8 /* ShopCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCreateViewController.swift; sourceTree = "<group>"; };
 		11DD616A29274F6100D6E5BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		11DD616D2927819600D6E5BC /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduceCreateViewController.swift; sourceTree = "<group>"; };
 		31C09D511D01E7F7A3CA62CE /* Pods-ChokubaiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.debug.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4672B5853CEA66D151B6E4E7 /* Pods-ChokubaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.release.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.release.xcconfig"; sourceTree = "<group>"; };
 		B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChokubaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				11DD616C2927815B00D6E5BC /* Models */,
 				1126C99D29206E9700CD2ED6 /* UIColorExtension.swift */,
 				1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */,
+				11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */,
 				11724E222920DAC2000A80B8 /* WelcomeViewController.swift */,
 				1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */,
 				1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */,
@@ -261,6 +264,7 @@
 				1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */,
 				11724E2E2923F149000A80B8 /* ShopCreateViewController.swift in Sources */,
 				1126C98F291F2BCE00CD2ED6 /* SearchViewController.swift in Sources */,
+				11DD61712928D06F00D6E5BC /* ProduceCreateViewController.swift in Sources */,
 				1126C99E29206E9700CD2ED6 /* UIColorExtension.swift in Sources */,
 				11DD616B29274F6100D6E5BC /* ProfileViewController.swift in Sources */,
 				1126C98D291E270200CD2ED6 /* ShopViewController.swift in Sources */,
