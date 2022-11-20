@@ -12,8 +12,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var popularCropCollectionView: UICollectionView!
     
+    @IBOutlet weak var goods1Btn: UIButton!
     
     let items = ["野菜１","野菜2","野菜3","野菜4","野菜5","野菜6"]
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -33,6 +35,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         popularCropCollectionView.dataSource = self
 //        termsNameTableView.dataSource = self
         // Do any additional setup after loading the view.
+
+  
+    // hogeImageという名前の画像
+   // 背景に画像をset.setBackgroundImage(image, for: .normal) // 背景に画像をset
     }
 
 

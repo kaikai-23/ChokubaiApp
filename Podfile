@@ -7,6 +7,7 @@ target 'ChokubaiApp' do
 
   # Pods for ChokubaiApp
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
 	pod 'Alamofire'

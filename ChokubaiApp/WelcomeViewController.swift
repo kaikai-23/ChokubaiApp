@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class WelcomeViewController: UIViewController {
+    
     var user:User?{
         didSet{
             print("user:",user?.email)
