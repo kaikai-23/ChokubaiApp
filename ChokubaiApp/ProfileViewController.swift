@@ -23,7 +23,7 @@ import FirebaseFirestore
 import Alamofire
 import FirebaseStorage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var shopImageView: UIImageView!
     
@@ -33,11 +33,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var introductionLabel: UILabel!
+
+    @IBOutlet weak var indexTableView: UITableView!
     var shopImageUrl:String?
     var address:String?
     var introduction:String?
     var shopname: String?
     var personname: String?
+    var crops: [String] = [
+        "にんじんスペシャル",
+        "ピーマン",
+        "10円ブドウ",
+    
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +57,7 @@ class ProfileViewController: UIViewController {
         guard let introDuction = introduction else{return}
         guard let shopImage = shopImageUrl else {return}
         shopImageView.image = UIImage(url: shopImage)
+        indexTableView.dataSource = self
 
 //       let image:UIImage = UIImage(url: "\(shopImage)")
 //        let _:UIImage = UIImage(url: "\(shopImage)")
@@ -69,6 +78,27 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return crops.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->   UITableViewCell {
+
+      // セルのオブジェクトを作成します。
+      // "NameCell" の部分はStoryboardでセルに設定したIdentifierを指定しています。
+      let cell = tableView.dequeueReusableCell(withIdentifier: "IndexNameCell", for: indexPath)
+
+
+
+      // namesから該当する行の文字列を取得してセルに設定します。
+     // indexPath.rowで何行目かがわかります。
+      cell.textLabel?.text = crops[indexPath.row]
+       return cell
+   }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchShopInfoFromFirestore()

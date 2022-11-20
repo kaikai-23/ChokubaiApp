@@ -25,6 +25,10 @@
 		11DD616B29274F6100D6E5BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD616A29274F6100D6E5BC /* ProfileViewController.swift */; };
 		11DD616E2927819600D6E5BC /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD616D2927819600D6E5BC /* Shop.swift */; };
 		11DD61712928D06F00D6E5BC /* ProduceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */; };
+		11DD61742929A08A00D6E5BC /* ProduceCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD61732929A08900D6E5BC /* ProduceCreateViewController.swift */; };
+		11DD61762929A12100D6E5BC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD61752929A12100D6E5BC /* MapViewController.swift */; };
+		11DD617F2929CF2A00D6E5BC /* PrefectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD617E2929CF2A00D6E5BC /* PrefectureViewController.swift */; };
+		11DD61812929D63C00D6E5BC /* retasu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11DD61802929D63C00D6E5BC /* retasu.jpg */; };
 		895F478B599954E603F49FD5 /* Pods_ChokubaiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		11DD616A29274F6100D6E5BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		11DD616D2927819600D6E5BC /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduceCreateViewController.swift; sourceTree = "<group>"; };
+		11DD61732929A08900D6E5BC /* ProduceCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduceCreateViewController.swift; sourceTree = "<group>"; };
+		11DD61752929A12100D6E5BC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		11DD617E2929CF2A00D6E5BC /* PrefectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewController.swift; sourceTree = "<group>"; };
+		11DD61802929D63C00D6E5BC /* retasu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = retasu.jpg; sourceTree = "<group>"; };
 		31C09D511D01E7F7A3CA62CE /* Pods-ChokubaiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.debug.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4672B5853CEA66D151B6E4E7 /* Pods-ChokubaiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChokubaiApp.release.xcconfig"; path = "Target Support Files/Pods-ChokubaiApp/Pods-ChokubaiApp.release.xcconfig"; sourceTree = "<group>"; };
 		B545587577DC2F955BC29443 /* Pods_ChokubaiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChokubaiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,16 +100,20 @@
 				1126C99B291F9A7700CD2ED6 /* SignUpViewController.swift */,
 				11DD61702928D06E00D6E5BC /* ProduceCreateViewController.swift */,
 				11724E222920DAC2000A80B8 /* WelcomeViewController.swift */,
+				11DD61752929A12100D6E5BC /* MapViewController.swift */,
 				1126C999291F857500CD2ED6 /* PopularCropCollectionViewCell.swift */,
 				1126C990291F6D4200CD2ED6 /* FilteredSearchViewController.swift */,
 				1126C974291A2BE200CD2ED6 /* AppDelegate.swift */,
 				1126C976291A2BE200CD2ED6 /* SceneDelegate.swift */,
 				1126C97A291A2BE200CD2ED6 /* Main.storyboard */,
+				11DD617E2929CF2A00D6E5BC /* PrefectureViewController.swift */,
 				11724E2D2923F149000A80B8 /* ShopCreateViewController.swift */,
 				11724E242921DBF4000A80B8 /* LoginViewController.swift */,
 				11DD616A29274F6100D6E5BC /* ProfileViewController.swift */,
+				11DD61732929A08900D6E5BC /* ProduceCreateViewController.swift */,
 				1126C998291F833F00CD2ED6 /* VCs */,
 				1126C97D291A2BE500CD2ED6 /* Assets.xcassets */,
+				11DD61802929D63C00D6E5BC /* retasu.jpg */,
 				1126C97F291A2BE500CD2ED6 /* LaunchScreen.storyboard */,
 				1126C9A1292088D500CD2ED6 /* GoogleService-Info.plist */,
 				1126C982291A2BE500CD2ED6 /* Info.plist */,
@@ -207,6 +219,7 @@
 				1126C9A2292088D500CD2ED6 /* GoogleService-Info.plist in Resources */,
 				1126C97E291A2BE500CD2ED6 /* Assets.xcassets in Resources */,
 				1126C97C291A2BE200CD2ED6 /* Main.storyboard in Resources */,
+				11DD61812929D63C00D6E5BC /* retasu.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11724E232920DAC2000A80B8 /* WelcomeViewController.swift in Sources */,
+				11DD61742929A08A00D6E5BC /* ProduceCreateViewController.swift in Sources */,
 				1126C99A291F857500CD2ED6 /* PopularCropCollectionViewCell.swift in Sources */,
 				1126C99C291F9A7700CD2ED6 /* SignUpViewController.swift in Sources */,
 				11724E2E2923F149000A80B8 /* ShopCreateViewController.swift in Sources */,
@@ -267,12 +281,14 @@
 				11DD61712928D06F00D6E5BC /* ProduceCreateViewController.swift in Sources */,
 				1126C99E29206E9700CD2ED6 /* UIColorExtension.swift in Sources */,
 				11DD616B29274F6100D6E5BC /* ProfileViewController.swift in Sources */,
+				11DD617F2929CF2A00D6E5BC /* PrefectureViewController.swift in Sources */,
 				1126C98D291E270200CD2ED6 /* ShopViewController.swift in Sources */,
 				11DD616E2927819600D6E5BC /* Shop.swift in Sources */,
 				1126C975291A2BE200CD2ED6 /* AppDelegate.swift in Sources */,
 				1126C977291A2BE200CD2ED6 /* SceneDelegate.swift in Sources */,
 				11724E252921DBF4000A80B8 /* LoginViewController.swift in Sources */,
 				1126C991291F6D4200CD2ED6 /* FilteredSearchViewController.swift in Sources */,
+				11DD61762929A12100D6E5BC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
